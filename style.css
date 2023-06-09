@@ -1,0 +1,144 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+:root{
+  /* ## Colors */
+
+  /* ### Primary */
+  
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+
+  --Headings-font: 'Poppins', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+}
+
+
+
+
+body{
+  background: url(images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  max-height: 110vh;
+  background-color: rgb(134, 28, 233);
+  /* max-height: 800px; */
+  padding: 1.5em 5em 2em 5em;
+}
+.logo{
+  max-width: 11em;
+}
+.article{
+  display: grid;
+grid-template-columns: 1.2fr 1fr;
+  margin-top: 2em;
+  width: 100%;
+}
+.img-bg{
+  width: 100%;
+}
+
+/* sction right */
+.section2{
+  padding: 0 2em 0 2em;
+}
+.title{
+  font-family: var(--Headings-font);
+  font-weight: 600;
+  font-size: 32px;
+  color: white;
+  margin-top: 1em ;
+  margin-bottom: 0.5em;
+
+}
+.description{
+  font-family: var(--body-font);
+  font-weight: 400;
+  color: white;
+  margin-bottom: 2em;
+}
+.btn{
+border: none;
+width: 40%;
+padding: 0.8em 0;
+border-radius: 2em;
+font-family: var(--body-font);
+color: var(--Violet);
+font-weight: 600;
+cursor: pointer;
+transition: all ease-in-out 0.31s;
+}
+.btn:hover{
+  background-color: rgb(43, 125, 226);
+  color: white;
+  /* border: 1px solid white; */
+}
+.footer{
+  position: relative;
+  height: 4em;
+}
+.icones{
+display: grid;  
+position: absolute;
+grid-template-columns: 1fr 1fr 1fr ;
+  right: 0;
+}
+.fa-brands{
+  font-size: 1em;
+  border: 0.12em solid white;
+  border-radius: 40em;
+  padding: 0.5em;
+  color: white;
+  margin: 1em;
+  cursor: pointer;
+  transition: all ease-in-out 0.1s;
+}
+.fa-brands:hover{
+  border: 1px solid rgb(78, 203, 241);
+}
+
+@media(max-width:700px){
+
+  .article{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  body{
+    padding: 1em;
+    background: url(images/bg-mobile.svg) no-repeat rgb(134, 28, 233) ;
+    background-size: contain;
+  }
+  .section1,.section2{
+    text-align: center;
+  }
+  .btn{
+    width: 70%;
+    margin-bottom: 3em;
+  }
+  .icones{
+    position: static;
+    width: 45%;
+
+  }
+  .footer{
+    display: flex;
+justify-content: center;
+align-items: center;
+ }
+ .fa-brands{
+  /* margin: 0.5em; */
+  margin: 0.5em;
+
+ }
+ .title{
+  font-size: 24px;
+ }
+ .description{
+  font-size: 15px;
+ }
+ 
+}
